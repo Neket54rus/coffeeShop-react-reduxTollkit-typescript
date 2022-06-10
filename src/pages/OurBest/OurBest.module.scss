@@ -1,0 +1,23 @@
+.ourBest {
+	&Header {
+		background: url("../../assets/img/best-bg.png") center/cover no-repeat;
+		padding: 130px 0 84px 0;
+		text-align: center;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 58px;
+		color: #000;
+	}
+}
+
+.coffeeItem {
+	padding: 50px 0 20px 0;
+	max-width: 700px;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+
+	img {
+		margin-right: 50px;
+	}
+}

@@ -18,5 +18,13 @@
 			"price": 6.99,
 			"img": "./img/best-card-card-logo-3.png"
 		}
+	],
+	"our": [
+		{ "id": 1, "title": "AROMISTICO Coffee 1 kg", "price": 1.99, "type": "Brazil" },
+		{ "id": 2, "title": "AROMISTICO Coffee 2 kg", "price": 2.99, "type": "Kenya" },
+		{ "id": 3, "title": "AROMISTICO Coffee 3 kg", "price": 3.99, "type": "Columbia" },
+		{ "id": 4, "title": "AROMISTICO Coffee 4 kg", "price": 4.99, "type": "Brazil" },
+		{ "id": 5, "title": "AROMISTICO Coffee 5 kg", "price": 5.99, "type": "Kenya" },
+		{ "id": 6, "title": "AROMISTICO Coffee 6 kg", "price": 6.99, "type": "Columbia" }
 	]
 }

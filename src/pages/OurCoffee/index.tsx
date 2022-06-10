@@ -4,6 +4,7 @@ import aboutLogo from "../../assets/img/our-coffee-about.png"
 import OurCoffeeAboutDividerLogoSvg from "../../assets/img/about-divider-logo-svg.svg"
 
 import styles from "./OurCoffee.module.scss"
+import { Filter, OurCard } from "../../components"
 
 export const OurCoffee: React.FC = () => {
 	return (
@@ -38,6 +39,9 @@ export const OurCoffee: React.FC = () => {
 			</div>
 
 			<div className={styles.OurCoffeeHr}></div>
+
+			<Filter />
+			<OurCard />
 		</div>
 	)
 }

@@ -1,8 +1,11 @@
 export interface BestState {
-	items: BestCard
+	items: BestCard[] | []
 	status: string
 }
 
 export type BestCard = {
-	best: { id: number; title: string; price: number; img: string }[] | []
+	id: number
+	title: string
+	price: number
+	img: string
 }

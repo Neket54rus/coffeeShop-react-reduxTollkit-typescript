@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 import dividerLogoSvg from "../../assets/img/divider-logo.svg"
 
@@ -18,7 +19,9 @@ export const Greeting: React.FC = () => {
 				<br />
 				Want to try our beans?
 			</div>
-			<button className={styles.btn}>More</button>
+			<Link to="/our-coffee">
+				<button className={styles.btn}>More</button>
+			</Link>
 		</div>
 	)
 }

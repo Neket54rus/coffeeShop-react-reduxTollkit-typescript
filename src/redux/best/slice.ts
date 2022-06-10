@@ -4,7 +4,7 @@ import { fetchBestCard } from "./asyncActions"
 import { BestState } from "./types"
 
 const initialState: BestState = {
-	items: { best: [] },
+	items: [],
 	status: "",
 }
 
