@@ -1,7 +1,8 @@
 import React from "react"
+import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
 import { RootState } from "../../redux"
-import { useSelector } from "react-redux"
 import { useAppDispatch } from "../../redux"
 import { fetchOurCard } from "../../redux/ourCard/asyncActions"
 import logoPng from "../../assets/img/our-coffee-card.png"
@@ -18,20 +19,18 @@ export const OurCard: React.FC = () => {
 		dispatch(fetchOurCard({ typeSort, searchStr }))
 	}, [typeSort, searchStr])
 
-	console.log(data)
-
 	return (
 		<div className="container">
 			<div className={styles.ourCard}>
 				{data.length
 					? data.map((item) => {
 							return (
-								<div key={item.id} className={styles.card}>
+								<Link to={`/our-coffee/${item.id}`} key={item.id} className={styles.card}>
 									<img src={logoPng} alt="Our Coffee card img" />
 									<div className={styles.title}>{item.title}</div>
 									<div className={styles.type}>{item.type}</div>
 									<div className={styles.price}>{item.price}$</div>
-								</div>
+								</Link>
 							)
 					  })
 					: "Not found("}

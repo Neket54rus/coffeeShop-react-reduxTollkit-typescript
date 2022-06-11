@@ -1,0 +1,74 @@
+.ourCoffeeItem {
+	display: flex;
+	align-items: center;
+	padding-top: 30px;
+	max-width: 900px;
+
+	&Title {
+		font-size: 24px;
+		line-height: 35px;
+		color: #000000;
+		text-align: center;
+		margin-bottom: 21px;
+	}
+
+	&Divider {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 25px;
+
+		&Left {
+			background: #000;
+			width: 60px;
+			height: 1px;
+			margin-right: 25px;
+		}
+		&Right {
+			background: #000;
+			width: 60px;
+			height: 1px;
+			margin-left: 25px;
+		}
+	}
+
+	&Type {
+		font-size: 14px;
+		line-height: 20px;
+		color: #000000;
+		margin-bottom: 16px;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&Descr {
+		font-size: 14px;
+		line-height: 20px;
+		color: #000000;
+		margin-bottom: 16px;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&Price {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 20px;
+		color: #000000;
+		margin-bottom: 16px;
+
+		span {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 35px;
+		}
+	}
+
+	a:visited {
+		color: #000;
+	}
+}
