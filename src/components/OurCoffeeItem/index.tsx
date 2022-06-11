@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 
 import styles from "./OurCoffeeItem.module.scss"
 import logo from "../../assets/img/our-coffee-item-logo.png"
@@ -10,16 +10,21 @@ import { OurCard } from "../../redux/ourCard/types"
 export const OurCoffeeItem: React.FC = () => {
 	const [coffee, setCoffe] = React.useState<OurCard[]>()
 	const { id } = useParams()
+	const navigation = useNavigate()
 
 	React.useEffect(() => {
 		async function fetchPizza() {
 			try {
-				const { data } = await axios.get("../data.json")
+				const { data } = await axios.get<{
+					our: OurCard[]
+				}>("../data.json")
+				console.log(data)
 				setCoffe(data.our.filter((item: OurCard) => item.id === Number(id)))
 			} catch (error) {
 				alert("Fail")
 			}
 		}
+
 		fetchPizza()
 	}, [])
 
@@ -52,7 +57,9 @@ export const OurCoffeeItem: React.FC = () => {
 								</React.Fragment>
 						  ))
 						: "Loading..."}
-					<Link to="/our-coffee">Back</Link>
+					<div onClick={() => navigation(-1)} className={styles.ourCoffeeItemBack}>
+						Back
+					</div>
 				</div>
 			</div>
 		</div>

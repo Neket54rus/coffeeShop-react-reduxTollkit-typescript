@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom"
 
 import styles from "./OurBest.module.scss"
 
-interface Test {
+interface DataType {
 	id: number
 	img: string
 	title: string
@@ -12,15 +12,15 @@ interface Test {
 }
 
 export const OurBest: React.FC = () => {
-	const [bestCoffee, setBestCoffee] = React.useState<Test[]>()
+	const [bestCoffee, setBestCoffee] = React.useState<DataType[]>()
 
 	const { id } = useParams()
 
 	React.useEffect(() => {
 		async function fetchPizza() {
 			try {
-				const { data } = await axios.get("../data.json")
-				setBestCoffee(data.best.filter((item: Test) => item.id === Number(id)))
+				const { data } = await axios.get<{ best: DataType[] }>("../data.json")
+				setBestCoffee(data.best.filter((item: DataType) => item.id === Number(id)))
 			} catch (error) {
 				alert("Fail")
 			}

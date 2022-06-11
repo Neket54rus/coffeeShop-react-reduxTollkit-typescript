@@ -68,7 +68,8 @@
 		}
 	}
 
-	a:visited {
-		color: #000;
+	&Back {
+		cursor: pointer;
+		display: inline-block;
 	}
 }
